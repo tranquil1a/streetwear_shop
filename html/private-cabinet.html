@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Streetwear</div>
+      <ul>
+        <li><a href="/html/index.html">Home</a></li>
+        <li><a href="/html/product.html">Products</a></li>
+        <li><a href="/html/cart.html">Cart</a></li>
+        <li><button onclick="handleLogOut()" class="logout-btn">Log Out</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="account-section">
+      <h1>Welcome, <span id="user-name"></span>!</h1>
+      <div class="account-details">
+        <h2>Your Account Details:</h2>
+        <p><strong>Email:</strong> <span id="user-email"></span></p>
+      </div>
+    </section>
+  </main>
+
+  
+
+  <script src="/js/auth.js"></script>
+  <script>
+    // Display logged-in user details on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+      if (loggedInUser) {
+        // Display user details
+        document.getElementById('user-name').textContent = loggedInUser.username;
+        document.getElementById('user-email').textContent = loggedInUser.email;
+      } else {
+        // Redirect to login page if no user is logged in
+        alert('You must log in to access your account.');
+        window.location.href = '/html/login.html';
+      }
+    });
+  </script>
+</body>
+<footer class="footershit">
+  <p>&copy; 2024 Streetwear Shop</p>
+</footer>
+</html>

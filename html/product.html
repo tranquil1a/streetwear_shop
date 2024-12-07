@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Streetwear</div>
+      <ul>
+        <li><a href="/html/index.html" onclick="showSection('home')">Home</a></li>
+        <li><a href="/html/product.html" onclick="showSection('basketball')">Products</a></li>
+        <li><a href="/html/cart.html" onclick="showSection('skateboarding')">Cart</a></li>
+        <li id="auth-links">
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Category: Basketball Clothes</h2>
+    <div class="product-grid">
+      <!-- Product 1 -->
+      <div class="product-item">
+        <img src="https://product-images-json-derulo.hb.kz-ast.bizmrg.com/802088-p01-fa23-techfleece-giannis--0015-1693238389074.jpg.webp" alt="Product 1">
+        <h3>Techs</h3>
+        <p>$89.99</p>
+        <button class="btn-addToCart" onclick="addToCart('101', 'Nike Techs', 89.99, '/images/802088-p01-fa23-techfleece-giannis--0015-1693238389074.jpg.webp')">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <h2>Category: Skateboarding Clothes</h2>
+    <div class="product-grid">
+      <!-- Product 2 -->
+      <div class="product-item">
+        <img src="https://product-images-json-derulo.hb.kz-ast.bizmrg.com/Jeff-Grosso-O-sept-89-7-5-72_1024x1024.jpg" alt="Product 2">
+        <h3>Jeans</h3>
+        <p>$49.99</p>
+        <button class="btn-addToCart" onclick="addToCart('102', 'SK8 Jeans', 49.99, '/images/Jeff-Grosso-O-sept-89-7-5-72_1024x1024.jpg')">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Streetwear Shop</p>
+  </footer>
+  <div id="sticky-cart">
+    <a href="/html/cart.html">
+      <img src="https://product-images-json-derulo.hb.kz-ast.bizmrg.com/Font_Awesome_5_solid_shopping-cart.svg.png" alt="Cart" id="cart-icon">
+      <span id="cart-count">0</span>
+    </a>
+  </div>
+  <script src="/js/cart.js"></script>
+  <script>renderCart();</script>
+</body>
+
+</html>

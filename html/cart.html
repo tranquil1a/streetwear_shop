@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Streetwear</div>
+      <ul>
+        <li><a href="/html/index.html" onclick="showSection('home')">Home</a></li>
+        <li><a href="/html/product.html" onclick="showSection('basketball')">Products</a></li>
+        <li><a href="/html/cart.html" onclick="showSection('skateboarding')">Cart</a></li>
+        <li id="auth-links">
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Your Cart</h2>
+    <div id="cart-container" class="cart-container"></div>
+    <div id="cart-summary" class="cart-summary">
+      <p id="cart-total"></p>
+      <button id="proceed-to-payment" class="btn" style="display: none;" onclick="proceedToPayment()">Proceed to Payment</button>
+    </div>
+  </main>
+  <div id="sticky-cart">
+    <a href="/html/cart.html">
+      <img src="/images/Font_Awesome_5_solid_shopping-cart.svg.png" alt="Cart" id="cart-icon">
+      <span id="cart-count">0</span>
+    </a>
+  </div>
+  <script src="/js/cart.js"></script>
+</body>
+</html>
